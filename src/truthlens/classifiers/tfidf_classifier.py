@@ -42,3 +42,13 @@ class TfidfClassifier:
 
         print("Model and vectorizer loaded successfully!")
 
+    
+    def predict_probability(self, text):
+
+        text_tfidf = self.vectorizer.transform(text)
+
+        probabilities = self.model.predict_proba(text_tfidf)
+
+        return probabilities
+
+
