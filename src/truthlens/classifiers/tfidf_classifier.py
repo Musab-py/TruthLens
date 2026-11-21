@@ -48,4 +48,3 @@ class TfidfClassifier:
         probabilities = self.model.predict_proba(text_tfidf)
         return probabilities
 
-
